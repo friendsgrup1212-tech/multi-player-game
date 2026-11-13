@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SP BHAI Gaming Zone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🎮 SP BHAI GAMING ZONE</h1>
+  <p>Play Together, Win Together!</p>
+</header>
+
+<main>
+  <h2>Choose Your Gaming Mode</h2>
+
+  <section class="modes">
+    <div class="card">
+      <h2>🌐 Online Multiplayer</h2>
+      <p>2 या 4 खिलाड़ी अलग-अलग मोबाइल से खेलें।</p>
+      <button onclick="showOnline()">Play Online</button>
+    </div>
+
+    <div class="card">
+      <h2>👥 2 Player Local</h2>
+      <p>एक ही मोबाइल पर दो खिलाड़ी खेलें।</p>
+      <button onclick="startLocal(2)">Play 2 Players</button>
+    </div>
+
+    <div class="card">
+      <h2>👨‍👩‍👦‍👦 4 Player Local</h2>
+      <p>एक ही मोबाइल या कंप्यूटर पर चार खिलाड़ी खेलें।</p>
+      <button onclick="startLocal(4)">Play 4 Players</button>
+    </div>
+  </section>
+
+  <section id="online" class="game-section" hidden>
+    <h2>Online Room</h2>
+    <input id="playerName" placeholder="Enter your name">
+    <select id="playerCount">
+      <option value="2">2 Players</option>
+      <option value="4">4 Players</option>
+    </select>
+    <button onclick="createRoom()">Create Room</button>
+    <hr>
+    <input id="roomId" placeholder="Enter Room ID">
+    <button onclick="joinRoom()">Join Room</button>
+    <p id="roomStatus"></p>
+  </section>
+
+  <section id="local" class="game-section" hidden>
+    <h2 id="localTitle"></h2>
+    <p>Choose a game:</p>
+    <button onclick="startTicTacToe()">Tic Tac Toe</button>
+    <div id="board"></div>
+    <p id="gameStatus"></p>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 SP BHAI Gaming Zone</p>
+</footer>
+
+<script src="https://cdn.socket.io/4.8.1/socket.io.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
