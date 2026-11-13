@@ -1,0 +1,124 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #10101d;
+  color: white;
+  text-align: center;
+}
+
+header {
+  background: linear-gradient(120deg, #27105c, #075b88);
+  padding: 35px 15px;
+}
+
+header h1 {
+  font-size: clamp(25px, 5vw, 40px);
+  color: #65e6ff;
+}
+
+header p {
+  margin-top: 12px;
+}
+
+main {
+  padding: 35px 15px;
+}
+
+main > h2 {
+  margin-bottom: 25px;
+}
+
+.modes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1050px;
+  margin: auto;
+}
+
+.card {
+  background: #202039;
+  border: 1px solid #494977;
+  border-radius: 15px;
+  padding: 28px 15px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  border-color: #43dfff;
+}
+
+.card p {
+  margin: 18px 0;
+  color: #c5c5d8;
+}
+
+button {
+  background: linear-gradient(90deg, #673de6, #087dc5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  margin: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+input, select {
+  padding: 12px;
+  margin: 8px;
+  border-radius: 7px;
+  border: 1px solid #777;
+  max-width: 100%;
+}
+
+.game-section {
+  background: #202039;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px 12px;
+  border-radius: 15px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 85px);
+  justify-content: center;
+  gap: 7px;
+  margin: 20px auto;
+}
+
+.cell {
+  height: 85px;
+  background: #36365c;
+  color: white;
+  font-size: 30px;
+  border: 1px solid #777;
+  border-radius: 8px;
+}
+
+footer {
+  padding: 20px;
+  background: #080812;
+  margin-top: 40px;
+}
+
+@media(max-width: 480px) {
+  #board {
+    grid-template-columns: repeat(3, 75px);
+  }
+  .cell {
+    height: 75px;
+  }
+}
